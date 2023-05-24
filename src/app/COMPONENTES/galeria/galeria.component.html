@@ -1,0 +1,177 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>GALERÍA</h1>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <ng-container *ngFor="let cuadro of ListarGallery; let i = index;">
+            <ng-container *ngIf="i % 3 == 0">
+                <div class="col-lg-4 mb-4">
+
+                    <a href="#!" data-bs-toggle="modal" [attr.data-bs-target]="'#'+cuadro.idgallery">
+                        <img class="w-100 mb-4 rounded" src="{{cuadro.srcimg}}" alt="{{cuadro.titulo}}">
+                    </a>
+                    <!-- Imagen 1-->
+                    <div tabindex="-1" [attr.aria-labelledby]="'#'+cuadro.idgallery" aria-hidden="true"
+                        class="modal fade" id="{{cuadro.idgallery}}">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <img src="{{cuadro.srcimg}}" alt="DE_COMPRAS">
+                                <div class="card">
+
+                                    <div class="card-body">
+                                        <h3 class="card-title"><u>{{cuadro.titulo}}</u></h3>
+                                        <p class="card-text">
+                                            <li>
+                                                <ul><b>TECNICA:</b> {{cuadro.tecnica}}</ul>
+                                                <ul><b>TAMAÑO:</b> {{cuadro.medidas}}</ul>
+                                                <ul><b>AÑO:</b> {{cuadro.anio}}</ul>
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div *ngIf="ListarGallery[i+1]">
+
+                        <a href="#!" data-bs-toggle="modal" [attr.data-bs-target]="'#'+ListarGallery[i+1].idgallery">
+                            <img class="w-100 mb-4 rounded" src="{{ListarGallery[i+1].srcimg}}"
+                                alt="{{ListarGallery[i+1].titulo}}">
+                        </a>
+                        <!-- Imagen 1-->
+                        <div tabindex="-1" [attr.aria-labelledby]="'#'+ListarGallery[i+1].idgallery" aria-hidden="true"
+                            class="modal fade" id="{{ListarGallery[i+1].idgallery}}">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <img src="{{ListarGallery[i+1].srcimg}}" alt="DE_COMPRAS">
+                                    <div class="card">
+
+                                        <div class="card-body">
+                                            <h3 class="card-title"><u>{{ListarGallery[i+1].titulo}}</u></h3>
+                                            <p class="card-text">
+                                                <li>
+                                                    <ul><b>TECNICA:</b> {{ListarGallery[i+1].tecnica}}</ul>
+                                                    <ul><b>TAMAÑO:</b> {{ListarGallery[i+1].medidas}}</ul>
+                                                    <ul><b>AÑO:</b> {{ListarGallery[i+1].anio}}</ul>
+                                                </li>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div *ngIf="ListarGallery[i+2]">
+
+                        <a href="#!" data-bs-toggle="modal" [attr.data-bs-target]="'#'+ListarGallery[i+2].idgallery">
+                            <img class="w-100 mb-4 rounded" src="{{ListarGallery[i+2].srcimg}}"
+                                alt="{{ListarGallery[i+2].titulo}}">
+                        </a>
+                        <!-- Imagen 1-->
+                        <div tabindex="-1" [attr.aria-labelledby]="'#'+ListarGallery[i+1].idgallery" aria-hidden="true"
+                            class="modal fade" id="{{ListarGallery[i+2].idgallery}}">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <img src="{{ListarGallery[i+2].srcimg}}" alt="DE_COMPRAS">
+                                    <div class="card">
+
+                                        <div class="card-body">
+                                            <h3 class="card-title"><u>{{ListarGallery[i+2].titulo}}</u></h3>
+                                            <p class="card-text">
+                                                <li>
+                                                    <ul><b>TECNICA:</b> {{ListarGallery[i+2].tecnica}}</ul>
+                                                    <ul><b>TAMAÑO:</b> {{ListarGallery[i+2].medidas}}</ul>
+                                                    <ul><b>AÑO:</b> {{ListarGallery[i+2].anio}}</ul>
+                                                </li>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </ng-container>
+
+        </ng-container>
+
+
+    </div>
+
+    <!--
+        <div class="col-lg-4 mb-4">
+
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/DE_COMPRAS.jpg" alt="DE_COMPRAS">
+            </a>
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage2">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/AMANECER_EN_MINESSOTA.jpg"
+                    alt="AMANECER_EN_MINESSOTA">
+            </a>
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage7">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/SORPRESA.jpg" alt="SORPRESA">
+            </a>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage3">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/LA_PARADA.jpg" alt="LA_PARADA">
+            </a>
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage4">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/LAVABO.jpg" alt="LAVABO">
+            </a>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage5">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/EN_LAS_NUBES.jpg"
+                    alt="EN_LAS_NUBES">
+            </a>
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage6">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/MARY_POPPINS.JPG"
+                    alt="MARY_POPPINS">
+            </a>
+            <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage8">
+                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/GASOLINERA.JPG" alt="GASOLINERA">
+            </a>
+        </div>
+    </div>
+
+    -->
+    <!-- Galeria clicable -------------------------------------->
+
+    <!-- Imagen 1-->
+    <div tabindex="-1" aria-labelledby="modalImage1" aria-hidden="true" class="modal fade" id="modalImage1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <img src="../../../assets/images/Galeria/DE_COMPRAS.jpg" alt="DE_COMPRAS">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h3 class="card-title"><u>DE COMPRAS</u></h3>
+                        <p class="card-text">
+                            <li>
+                                <ul><b>TECNICA:</b> Acrilico sobre lienzo</ul>
+                                <ul><b>TAMAÑO:</b> 65x50 cm</ul>
+                                <ul><b>AÑO:</b> 2018</ul>
+                            </li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

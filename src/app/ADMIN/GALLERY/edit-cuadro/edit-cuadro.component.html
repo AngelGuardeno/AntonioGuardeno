@@ -1,0 +1,79 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-12">
+            <h1>EDITAR CUADRO</h1>
+        </div>
+    </div>
+
+    <div class="row" id="cuerpo">
+        <div class="col">
+
+            <a href="/admin/adminGallery"><button class="btn btn-primary">VOLVER</button></a>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-6">
+
+            <form>
+
+                <div class="mb3">
+                    <input type="file" (change)="uploadImage($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label">Nombre</label>
+                    <input [(ngModel)]="cuadro.titulo" type="text" class="form-control" name="titulo">
+                </div>
+                <div class="mb3">
+                    <label class="form-label">Tecnica</label>
+                    <input [(ngModel)]="cuadro.tecnica" type="text" class="form-control" name="tecnica">
+                </div>
+                <div class="mb3">
+                    <label class="form-label">Medidas</label>
+                    <input [(ngModel)]="cuadro.medidas" type="text" class="form-control" name="medidas">
+                </div>
+                <div class="mb3">
+                    <label class="form-label">Año</label>
+                    <input [(ngModel)]="cuadro.anio" type="number" class="form-control" name="anio">
+                </div>
+
+                <button (click)="updateCuadro()" class="btn btn-success">Guardar</button>
+                <p *ngIf="mostrar"><b>{{mensaje}}</b></p>
+            </form>
+        </div>
+
+
+        <div class="col-sm-6">
+            <form>
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{cuadro.srcimg}}" alt="Sin imagen">
+
+                <br>
+                <div class="mb3">
+                    <label class="form-label"><b>Titulo:</b> {{cuadro.titulo}}</label>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label"><b>Tecnica:</b> {{cuadro.tecnica}}</label>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label"><b>Medidas:</b> {{cuadro.medidas}}</label>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label"><b>Año:</b> {{cuadro.anio}}</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

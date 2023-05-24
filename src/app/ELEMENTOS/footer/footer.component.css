@@ -1,0 +1,95 @@
+.container{
+    padding: 30px 20px 10px;
+    background-color: rgb(240, 205, 162);
+    /*border-radius: 0 0 15px 15px;*/
+    width: 100%;
+    margin-top: 0;
+}
+
+.row:first-of-type div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row div {
+    border: rgba(255, 0, 0, 0) 1px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#logo {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+
+#enlaces{
+    border-top: 1px solid black;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: large;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+}
+
+#contenedorEnlaces{
+    margin-top: 20px;
+}
+
+li{
+    transition: 0.7s;
+    font-weight: 400;
+    font-size: medium;
+    text-align: center;
+    margin: 7px 0;
+}
+
+a{
+    transition: 0.7s;
+}
+a:hover{
+    background-color: rgb(186, 132, 65);
+    transition: 0.7s;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+#redes{
+    text-align: start;
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+img{
+    width: 15px;
+    height: 15px;
+    align-items: center;
+}
+
+#correoEti{
+    font-weight: 400;
+    font-size: medium;
+    text-align: start;
+    margin-left: 25%;
+    width: 70%;
+}

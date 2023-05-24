@@ -1,0 +1,31 @@
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-12">
+            <h1>ENVIAR CORREO</h1>
+        </div>
+    </div>
+
+
+    <form [formGroup]="datos" (ngSubmit)="onSubmit()">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <p class="text-center">Envia un correo a Antonio Guardeño. Dudas, felicitaciones, contacto...</p>
+
+                <input type="email" placeholder="Correo:" class="form-control" formControlName="email" [hidden]="true">
+
+                <input type="text" placeholder="Tu nombre:" class="form-control" formControlName="nombre" required>
+                <input type="email" placeholder="Tu correo:" class="form-control" formControlName="correoEnvio" required>
+
+                <input type="text" placeholder="Asunto:" class="form-control" formControlName="asunto" required>
+                
+                <textarea cols="40" rows="4" placeholder="Mensaje:" class="form-control" formControlName="mensaje" required></textarea>
+
+                <div class="text-center">
+                    <input class="btn-outlet-danger" type="submit" value="Enviar" (click)="envioCorreo()">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

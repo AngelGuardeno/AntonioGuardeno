@@ -1,0 +1,24 @@
+.container{
+    margin-top: 30px;
+}
+
+#cuerpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px black double;
+    margin-bottom: 20px;
+}
+
+button{
+    margin: 20px 0;
+}
+
+img{
+    max-width: 650px;
+    max-height: 650px;
+}

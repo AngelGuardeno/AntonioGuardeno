@@ -1,0 +1,45 @@
+.container {
+    padding: 20px 20px 10px;
+    background-color: rgb(240, 205, 162);
+    /*border-radius: 0 0 15px 15px;*/
+    width: 100%;
+}
+
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px black double;
+}
+
+td {
+    text-align: center;
+    border: none;
+}
+
+.modal-contentm,
+.card {
+    background-color: rgb(240, 205, 162);
+}
+
+li {
+    list-style: none;
+}
+
+
+a {
+    position: relative;
+    bottom: 70px;
+    z-index: 1;
+}
+
+button{
+    background-color: rgb(240, 205, 162);
+    width: 40%;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(240, 205, 162);
+}

@@ -1,0 +1,22 @@
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70vh;
+    /* Ajusta la altura del contenedor de la imagen según sea necesario */
+    margin: 0%;
+    padding: 0%;
+
+}
+
+
+
+.fit-screen {
+    max-width: 70%;
+    height: auto;
+    position: sticky;
+    margin: 0;
+    opacity: 0.8;
+}

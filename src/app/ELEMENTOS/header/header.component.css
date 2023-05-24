@@ -1,0 +1,63 @@
+.row div {
+    border: rgba(255, 0, 0, 0) 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid red;*/
+}
+
+
+img {
+    height: 100px;
+    width: 100px;
+    margin: 0 0 20px 0;
+}
+
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+#enlaceTitulo {
+    text-decoration: none;
+    color: black;
+}
+
+
+a {
+    transition: 0.7s;
+}
+
+.dropdown-menu,
+.dropdown-item {
+    background-color: rgb(241, 210, 173);
+    transition: 0.7s;
+}
+
+.dropdown-item:hover,
+a:hover {
+    background-color: rgb(186, 132, 65);
+    transition: 0.7s;
+}
+
+
+#footer {
+    padding: 30px 20px 10px;
+    background-color: rgb(240, 205, 162);
+}
+
+#divisor{
+    margin: 0;
+    padding: 0;
+}
+
+#deshabilitado{
+    font-size: 12px;
+    margin: 0;
+}
+

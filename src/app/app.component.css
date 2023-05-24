@@ -1,0 +1,37 @@
+#header {
+    position: fixed;
+    border-bottom: 1px grey solid;
+    padding: 30px 20px 10px;
+    background-color: rgb(240, 205, 162);
+    /*border-radius: 0 0 15px 15px;*/
+    width: 100%;
+    max-height: 300px;
+    z-index: 2;
+
+}
+
+#footer {
+    padding: 0px 20px 10px;
+    background-color: rgb(240, 205, 162);
+    /*border-radius: 0 0 15px 15px;*/
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+}
+
+.spacer {
+
+    margin: auto;
+    width: 100%;
+    min-height: 290px;
+    max-height: 500px;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    margin: auto;
+    width: 100%;
+    min-height: 150px;
+    max-height: 500px;
+}

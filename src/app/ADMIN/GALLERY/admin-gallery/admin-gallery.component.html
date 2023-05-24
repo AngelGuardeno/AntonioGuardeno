@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h1>EDITAR GALERIA</h1>
+        </div>
+    </div>
+
+    <div class="row" id="cuerpo">
+
+
+        <div class="col">
+
+            <a href="/admin/admin"><button class="btn btn-primary">VOLVER</button></a>
+            <a href="/admin/adminGallery/addCuadro"><button class="btn btn-info">AÑADIR CUADRO</button></a>
+        </div>
+        
+        <table class="table">
+            <thead>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cuadro of ListarGallery">
+                <td><img src="{{cuadro.srcimg}}" alt=""></td>
+                <div>
+                    <td>
+                       <!-- <button (click)="updateCuadro(cuadro.idgallery)" type="button" class="btn btn-success">Editar</button>-->
+                    </td>
+                    <td>
+                        <button (click)="updateCuadro(cuadro.idgallery)" type="button" class="btn btn-success">Editar</button>
+
+                        <button (click)="deleteCuadro(cuadro.idgallery)" type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+</div>
