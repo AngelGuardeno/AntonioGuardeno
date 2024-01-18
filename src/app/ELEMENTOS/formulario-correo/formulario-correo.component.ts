@@ -52,6 +52,7 @@ export class FormularioCorreoComponent {
         }else{
           Notiflix.Notify.failure('Error, correo incorrecto');
         }
+        
 
       },
 

@@ -1,0 +1,117 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h1>AÑADIR DESARROLLO</h1>
+        </div>
+    </div>
+
+    <div class="row" id="cuerpo">
+        <div class="col">
+
+            <a href="/administradorAGG1970/adminDesarrollo"><button class="btn btn-primary">VOLVER</button></a>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-lg-6">
+
+
+            <form >
+
+                <div class="mb3">
+                    <label for="">Portada: </label>
+                    <input type="file" (change)="uploadImageMain($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label">Nombre:</label>
+                    <input [(ngModel)]="desarrollo.titulo" type="text" class="form-control" name="titulo">
+                </div>
+
+
+                <div class="mb3">
+                    <label for="">Primera imagen: </label>
+                    <input type="file" (change)="uploadImage1($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label for="">Segunda imagen: </label>
+                    <input type="file" (change)="uploadImage2($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label for="">Tercera imagen: </label>
+                    <input type="file" (change)="uploadImage3($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label for="">Cuarta imagen: </label>
+                    <input type="file" (change)="uploadImage4($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label for="">Quinta imagen: </label>
+                    <input type="file" (change)="uploadImage5($event)">
+                    <br>
+                </div>
+
+                <button (click)="addDesarrollo()" class="btn btn-success">Añadir</button>
+
+            </form>
+        </div>
+
+
+        <div class="col-lg-6">
+            <form>
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{desarrollo.srcimg_main}}" alt="Sin imagen">
+
+                <div class="mb3">
+                    <br>
+                    <label class="form-label"><b>Titulo:</b> {{desarrollo.titulo}}</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{desarrollo.srcimg1}}" alt="Imagen 1">
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{desarrollo.srcimg2}}" alt="Imagen 2">
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{desarrollo.srcimg3}}" alt="Imagen 3">
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{desarrollo.srcimg4}}" alt="Imagen 4">
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{desarrollo.srcimg5}}" alt="Imagen 5">
+
+
+            </form>
+        </div>
+    </div>
+</div>

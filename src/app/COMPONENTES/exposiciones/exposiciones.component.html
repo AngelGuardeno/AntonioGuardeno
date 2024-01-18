@@ -4,4 +4,284 @@
             <h1>EXPOSICIONES</h1>
         </div>
     </div>
+
+
+
+    <div class="row">
+        <ng-container *ngFor="let exposicion of ListarExposiciones; let i = index;">
+            <ng-container *ngIf="i % 2 == 0">
+                <div class="col-12">
+                    <a href="#!" data-bs-toggle="modal" [attr.data-bs-target]="'#'+exposicion.idexposicion"
+                        class="enlace">
+
+                        <div class="row mt-4">
+
+                            <div class="col-sm-4">
+                                <img src="{{exposicion.srcimg_principal}}" alt="" class="portada">
+                            </div>
+
+                            <div class="col-sm-1">
+                            </div>
+
+                            <div class="col-sm-6" id="titulo">
+                                <h4>{{exposicion.titulo}}</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <div tabindex="-1" [attr.aria-labelledby]="'#'+exposicion.idexposicion" aria-hidden="true"
+                        class="modal fade" id="{{exposicion.idexposicion}}">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <img src="{{exposicion.srcimg_tarjeta}}" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <br>
+                                            <h5>{{exposicion.titulo}}</h5>
+
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p>{{exposicion.descripcion}}</p>
+                                                    </div>
+
+                                                    <div class="col-6 text-center" *ngIf="exposicion.url1">
+                                                        <a href="{{exposicion.url1}}" target="_blank">Enlace exposicion 1</a>
+                                                    </div>
+                                                    <div class="col-6 text-center" *ngIf="exposicion.url2">
+                                                        <a href="{{exposicion.url2}}" target="_blank">Enlace exposicion 2</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="ListarExposiciones[i+1]">
+                        <a href="#!" data-bs-toggle="modal"
+                            [attr.data-bs-target]="'#'+ListarExposiciones[i+1].idexposicion" class="enlace">
+
+                            <div class="row mt-4">
+
+                                <div class="col-sm-6" id="titulo">
+                                    <h4 id="titulo2">{{ListarExposiciones[i+1].titulo}}</h4>
+                                </div>
+                                <div class="col-sm-1">
+                                </div>
+                                <div class="col-sm-4">
+                                    <img src="{{ListarExposiciones[i+1].srcimg_principal}}" alt="" class="portada">
+                                </div>
+
+                            </div>
+                        </a>
+                        <div tabindex="-1" [attr.aria-labelledby]="'#'+ListarExposiciones[i+1].idexposicion"
+                            aria-hidden="true" class="modal fade" id="{{ListarExposiciones[i+1].idexposicion}}">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-12">
+                                                <img src="{{ListarExposiciones[i+1].srcimg_tarjeta}}" alt="">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12">
+                                                <br>
+                                                <h5>{{ListarExposiciones[i+1].titulo}}"</h5>
+
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <p>{{ListarExposiciones[i+1].descripcion}}</p>
+                                                        </div>
+
+                                                        <div class="col-6 text-center" *ngIf="ListarExposiciones[i+1].url1">
+                                                            <a href="{{ListarExposiciones[i+1].url1}}"
+                                                                target="_blank">Enlace exposicion 1</a>
+                                                        </div>
+                                                        <div class="col-6 text-center" *ngIf="ListarExposiciones[i+1].url2">
+                                                            <a href="{{ListarExposiciones[i+1].url2}}"
+                                                                target="_blank">Enlace exposicion 2</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </ng-container>
+
+        </ng-container>
+    </div>
+
+
+
+
+    <!--
+
+        
+
+    <a href="#!" data-bs-toggle="modal" data-bs-target="#expo1" class="enlace">
+
+        <div class="row mt-4">
+
+            <div class="col-sm-4">
+                <img src="https://miro.medium.com/v2/resize:fit:1024/0*wATbQ49jziZTyhZH.jpg" alt="" class="portada">
+            </div>
+
+            <div class="col-sm-1">
+            </div>
+
+            <div class="col-sm-6" id="titulo">
+                <h4>Revista 365+</h4>
+            </div>
+        </div>
+    </a>
+    <div tabindex="-1" aria-labelledby="#expo1" aria-hidden="true" class="modal fade" id="expo1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <img src="https://easycdn.es/1/imagenes/animanga-0_343673.jpg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-12">
+                            <br>
+                            <h5>Revista 365</h5>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima mollitia
+                                            nostrum modi maxime a molestias voluptatem, dolorem tenetur. Quae laborum id
+                                            deserunt recusandae consequuntur ipsam fuga cupiditate perferendis. At,
+                                            tempore! Modi voluptates accusamus, provident a delectus rem doloremque
+                                            assumenda autem. Consequatur officia iusto dolor excepturi temporibus ut,
+                                            perspiciatis fugit exercitationem.</p>
+                                    </div>
+
+                                    <div class="col-6 text-center">
+                                        <a href="https://365artplus.com/" target="_blank">Revista365</a>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <a href="https://365artplus.com/" target="_blank">Revista365</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <a href="#!" data-bs-toggle="modal" data-bs-target="#expo1" class="enlace">
+
+        <div class="row mt-4">
+
+            <div class="col-sm-6" id="titulo">
+                <h4 id="titulo2">Revista 365+</h4>
+            </div>
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-4">
+                <img src="https://miro.medium.com/v2/resize:fit:1024/0*wATbQ49jziZTyhZH.jpg" alt="" class="portada">
+            </div>
+
+        </div>
+    </a>
+    <div tabindex="-1" aria-labelledby="#expo1" aria-hidden="true" class="modal fade" id="expo1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <img src="https://easycdn.es/1/imagenes/animanga-0_343673.jpg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-12">
+                            <br>
+                            <h5>Revista 365</h5>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima mollitia
+                                            nostrum modi maxime a molestias voluptatem, dolorem tenetur. Quae laborum id
+                                            deserunt recusandae consequuntur ipsam fuga cupiditate perferendis. At,
+                                            tempore! Modi voluptates accusamus, provident a delectus rem doloremque
+                                            assumenda autem. Consequatur officia iusto dolor excepturi temporibus ut,
+                                            perspiciatis fugit exercitationem.</p>
+                                    </div>
+
+                                    <div class="col-6 text-center">
+                                        <a href="https://365artplus.com/" target="_blank">Revista365</a>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <a href="https://365artplus.com/" target="_blank">Revista365</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    -->
+
 </div>

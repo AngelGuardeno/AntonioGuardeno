@@ -43,3 +43,8 @@ button:hover{
     background-color: rgb(0, 0, 0);
     color: rgb(240, 205, 162);
 }
+
+img{
+    margin: 0;
+    width: 100%;
+}

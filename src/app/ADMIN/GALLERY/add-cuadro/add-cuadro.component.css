@@ -22,3 +22,18 @@ img{
     max-width: 650px;
     max-height: 650px;
 }
+
+label{
+    margin: 5px 0;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input{
+    margin: 5px 0;
+}
+
+
+b{
+    text-decoration: underline;
+}

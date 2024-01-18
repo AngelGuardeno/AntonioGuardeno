@@ -10,7 +10,7 @@ import { BiografiaComponent } from './COMPONENTES/biografia/biografia.component'
 import { GaleriaComponent } from './COMPONENTES/galeria/galeria.component';
 import { DesarrolloComponent } from './COMPONENTES/desarrollo/desarrollo.component';
 import { ExposicionesComponent } from './COMPONENTES/exposiciones/exposiciones.component';
-import { ContactoComponent } from './COMPONENTES/contacto/contacto.component';
+
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
@@ -28,6 +28,12 @@ import { CorreoNoEnviadoComponent } from './ELEMENTOS/correo-no-enviado/correo-n
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AdminDesarrolloComponent } from './ADMIN/DESARROLLO/admin-desarrollo/admin-desarrollo.component';
+import { AddDesarrolloComponent } from './ADMIN/DESARROLLO/add-desarrollo/add-desarrollo.component';
+import { EditDesarrolloComponent } from './ADMIN/DESARROLLO/edit-desarrollo/edit-desarrollo.component';
+import { AdminExposicionesComponent } from './ADMIN/EXPOSICIONES/admin-exposiciones/admin-exposiciones.component';
+import { AddExposicionComponent } from './ADMIN/EXPOSICIONES/add-exposicion/add-exposicion.component';
+import { EditExposicionComponent } from './ADMIN/EXPOSICIONES/edit-exposicion/edit-exposicion.component';
 
 
 @NgModule({
@@ -40,14 +46,19 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     GaleriaComponent,
     DesarrolloComponent,
     ExposicionesComponent,
-    ContactoComponent,
     FormularioCorreoComponent,
     CorreoEnviadoComponent,
     IndexAdminComponent,
     AdminGalleryComponent,
     AddCuadroComponent,
     EditCuadroComponent,
-    CorreoNoEnviadoComponent
+    CorreoNoEnviadoComponent,
+    AdminDesarrolloComponent,
+    AddDesarrolloComponent,
+    EditDesarrolloComponent,
+    AdminExposicionesComponent,
+    AddExposicionComponent,
+    EditExposicionComponent
   ],
   imports: [
     BrowserModule,

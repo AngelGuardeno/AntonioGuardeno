@@ -5,105 +5,92 @@
         </div>
     </div>
 
+
     <div class="row mt-5">
+        <ng-container *ngFor="let desarrollo of ListarDesarrollos; let i = index;">
+            <ng-container *ngIf="i % 2 == 0">
+                <div class="col-lg-6 mb-4">
 
-        <div class="col-lg-6 mb-4">
+                    <img class="w-100 mb-4 rounded" src="{{desarrollo.srcimg_main}}" alt="{{desarrollo.titulo}}">
+                    <a href="#!" data-bs-toggle="modal" [attr.data-bs-target]="'#'+desarrollo.iddesarrollo">
+                        <button type="button" class="btn">Ver proceso</button>
 
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/DE_COMPRAS.jpg" alt="DE_COMPRAS">
+                    </a>
+                    <!-- Imagen 1-->
+                    <div tabindex="-1" [attr.aria-labelledby]="'#'+desarrollo.iddesarrollo" aria-hidden="true"
+                        class="modal fade" id="{{desarrollo.iddesarrollo}}">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
 
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/AMANECER_EN_MINESSOTA.jpg" alt="AMANECER_EN_MINESSOTA">
+                                <div class="card">
 
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage2">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/EN_LAS_NUBES.jpg" alt="EN_LAS_NUBES">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage3">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/SORPRESA.jpg" alt="SORPRESA">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage7">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-lg-6 mb-4">
-
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/LA_PARADA.jpg" alt="LA_PARADA">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage4">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/LAVABO.jpg" alt="LAVABO">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage5">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/MARY_POPPINS.JPG" alt="MARY_POPPINS">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage6">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-            <div>
-                <img class="w-100 mb-4 rounded" src="../../../assets/images/Galeria/GASOLINERA.JPG" alt="GASOLINERA">
-
-                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage8">
-                    <button type="button" class="btn">Ver proceso</button>
-                </a>
-            </div>
-        </div>
-
-    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title"><u>{{desarrollo.titulo}}</u></h3>
 
 
+                                    </div>
+
+                                    <img src="{{desarrollo.srcimg1}}" alt="">
+                                    <br>
+                                    <img src="{{desarrollo.srcimg2}}" alt="">
+                                    <br>
+                                    <img src="{{desarrollo.srcimg3}}" alt="">
+                                    <br>
+                                    <img src="{{desarrollo.srcimg4}}" alt="">
+                                    <br>
+                                    <img src="{{desarrollo.srcimg5}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div *ngIf="ListarDesarrollos[i+1]">
 
-    <!-- Imagen 1-->
-    <div tabindex="-1" aria-labelledby="modalImage1" aria-hidden="true" class="modal fade" id="modalImage1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <img src="../../../assets/images/Galeria/DE_COMPRAS.jpg" alt="DE_COMPRAS">
+                        <img class="w-100 mb-4 rounded" src="{{ListarDesarrollos[i+1].srcimg_main}}"
+                            alt="{{ListarDesarrollos[i+1].titulo}}">
+                        <a href="#!" data-bs-toggle="modal"
+                            [attr.data-bs-target]="'#'+ListarDesarrollos[i+1].iddesarrollo">
+                            <button type="button" class="btn">Ver proceso</button>
 
-                <p>asd</p>
+                        </a>
+                        <!-- Imagen 1-->
+                        <div tabindex="-1" [attr.aria-labelledby]="'#'+ListarDesarrollos[i+1].iddesarrollo"
+                            aria-hidden="true" class="modal fade" id="{{ListarDesarrollos[i+1].iddesarrollo}}">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
 
-                <div>
-                    <img src="" alt="">
+                                    <div class="card">
+
+                                        <div class="card-body">
+                                            <h3 class="card-title"><u>{{ListarDesarrollos[i+1].titulo}}</u></h3>
+
+                                            <img src="{{ListarDesarrollos[i+1].srcimg1}}" alt="">
+                                            <br>
+                                            <img src="{{ListarDesarrollos[i+1].srcimg2}}" alt="">
+                                            <br>
+                                            <img src="{{ListarDesarrollos[i+1].srcimg3}}" alt="">
+                                            <br>
+                                            <img src="{{ListarDesarrollos[i+1].srcimg4}}" alt="">
+                                            <br>
+                                            <img src="{{ListarDesarrollos[i+1].srcimg5}}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </div>
-        </div>
+
+            </ng-container>
+
+        </ng-container>
+
+
     </div>
 
 
-    <!-- Imagen 2-->
-    <div tabindex="-1" aria-labelledby="modalImage2" aria-hidden="true" class="modal fade" id="modalImage2">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <img src="../../../assets/images/Galeria/AMANECER_EN_MINESSOTA.jpg" alt="AMANECER_EN_MINESSOTA">
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui saepe labore, sint, iste sit ratione
-                    quod provident natus, unde voluptatem repellendus! Dolorem, tempora adipisci nostrum minus magnam
-                    velit ducimus.</p>
-            </div>
-        </div>
-    </div>
 
 </div>

@@ -1,0 +1,107 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h1>AÑADIR EXPOSICION</h1>
+        </div>
+    </div>
+
+    <div class="row" id="cuerpo">
+        <div class="col">
+
+            <a href="/administradorAGG1970/adminExposicion"><button class="btn btn-primary">VOLVER</button></a>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-lg-6">
+
+
+            <form >
+
+                <div class="mb3">
+                    <label for="">Imagen principal: </label>
+                    <input type="file" (change)="uploadImagePrincipal($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label">Nombre exposición:</label>
+                    <input [(ngModel)]="exposicion.titulo" type="text" class="form-control" name="titulo">
+                </div>
+
+
+                <div class="mb3">
+                    <label for="">Imagen segundaria: </label>
+                    <input type="file" (change)="uploadImageTarjeta($event)">
+                    <br>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label">Descripcion:</label>
+                    <textarea [(ngModel)]="exposicion.descripcion" name="descripcion" id="descripcion" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label">Enlace exposición 1:</label>
+                    <input [(ngModel)]="exposicion.url1" type="text" class="form-control" name="url1">
+                </div>
+
+                <div class="mb3">
+                    <label class="form-label">Enlace exposición 2:</label>
+                    <input [(ngModel)]="exposicion.url2" type="text" class="form-control" name="url2">
+                </div>
+
+
+                <button (click)="addExposicion()" class="btn btn-success">Añadir</button>
+
+            </form>
+        </div>
+
+
+        <div class="col-lg-6">
+            <form>
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{exposicion.srcimg_principal}}" alt="Sin imagen">
+
+                <div class="mb3">
+                    <br>
+                    <label class="form-label"><b>Titulo: </b> {{exposicion.titulo}}</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div *ngIf="cargando" class="mb3">
+                    Esperando...
+                </div>
+                <img *ngIf="!cargando" src="{{exposicion.srcimg_tarjeta}}" alt="Imagen secundaria">
+
+
+                <div class="mb3">
+                    <br>
+                    <label class="form-label" style="word-wrap: break-word;"><b>Descripción: </b> {{exposicion.descripcion}}</label>
+                    <br>
+                    <br>
+                </div>
+
+
+                <div class="mb3">
+                    <br>
+                    <label class="form-label"><b>Enlace exposición 1: </b> {{exposicion.url1}}</label>
+                </div>
+
+                <div class="mb3">
+                    <br>
+                    <label class="form-label"><b>Enlace exposición 2: </b> {{exposicion.url2}}</label>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

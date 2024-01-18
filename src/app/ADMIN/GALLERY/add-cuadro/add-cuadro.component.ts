@@ -38,7 +38,7 @@ export class AddCuadroComponent {
     delete this.cuadro.idgallery;
 
     this.GalleryService.addCuadro(this.cuadro).subscribe();
-    this.router.navigate(['/admin/adminGallery']);
+    this.router.navigate(['/administradorAGG1970/adminGallery']);
   }
 
   async uploadImage($event: any){
@@ -60,7 +60,6 @@ export class AddCuadroComponent {
     
     
   }
-
 
   getImages(fileName: string){
     const imagesRef = ref(this.storage, 'gallery')

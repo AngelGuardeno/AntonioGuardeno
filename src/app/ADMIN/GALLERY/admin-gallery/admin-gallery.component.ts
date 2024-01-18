@@ -35,7 +35,7 @@ export class AdminGalleryComponent {
     deleteCuadro(id:string | undefined){
       this.GalleryService.deleteCuadro(id).subscribe(
         res=>{
-          console.log('equipo eliminado');
+          console.log('Desarrollo eliminado');
           this.listarGallery()
         },
         err => console.log(err)
@@ -43,7 +43,7 @@ export class AdminGalleryComponent {
     }
 
     updateCuadro(id:string | undefined){
-      this.router.navigate(['admin/adminGallery/editCuadro/'+id]);
+      this.router.navigate(['administradorAGG1970/adminGallery/editCuadro/'+id]);
     }
 
 }

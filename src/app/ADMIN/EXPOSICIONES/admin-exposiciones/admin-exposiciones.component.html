@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-12">
-            <h1>EDITAR GALERIA</h1>
+            <h1>EDITAR DESARROLLO</h1>
         </div>
     </div>
 
@@ -12,28 +12,28 @@
         <div class="col">
 
             <a href="/administradorAGG1970"><button class="btn btn-primary">VOLVER</button></a>
-            <a href="/administradorAGG1970/adminGallery/addCuadro"><button class="btn btn-info">AÑADIR CUADRO</button></a>
+            <a href="/administradorAGG1970/adminExposicion/addExposicion"><button class="btn btn-info">AÑADIR EXPOSICION</button></a>
         </div>
-        
+
+
         <table class="table">
             <thead>
             </thead>
             <tbody>
-              <tr *ngFor="let cuadro of ListarGallery">
-                <td><img src="{{cuadro.srcimg}}" alt=""></td>
+              <tr *ngFor="let exposicion of ListarExposiciones">
+                <td><img src="{{exposicion.srcimg_principal}}" alt=""></td>
                 <div>
                     <td>
                        <!-- <button (click)="updateCuadro(cuadro.idgallery)" type="button" class="btn btn-success">Editar</button>-->
                     </td>
                     <td>
-                        <button (click)="updateCuadro(cuadro.idgallery)" type="button" class="btn btn-success">Editar</button>
+                        <button (click)="updateDesarrollo(exposicion.idexposicion)" type="button" class="btn btn-success">Editar</button>
 
-                        <button (click)="deleteCuadro(cuadro.idgallery)" type="button" class="btn btn-danger">Eliminar</button>
+                        <button (click)="deleteDesarrollo(exposicion.idexposicion)" type="button" class="btn btn-danger">Eliminar</button>
                     </td>
                 </div>
               </tr>
             </tbody>
-        </table>
-
+          </table>
     </div>
 </div>

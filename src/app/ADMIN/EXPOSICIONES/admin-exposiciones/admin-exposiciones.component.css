@@ -1,0 +1,35 @@
+.container{
+    margin-top: 30px;
+}
+
+#cuerpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px black double;
+}
+
+
+img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+button{
+    margin: 20px;
+    padding: 10px;
+}
